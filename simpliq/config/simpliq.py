@@ -100,6 +100,12 @@ def get_data():
             "items": [
                    {
                        "type": "doctype",
+                       "name": "simpliq settings",
+                       "label": _("simpliq settings"),
+                       "description": _("simpliq settings")
+                   },
+                   {
+                       "type": "doctype",
                        "name": "ERPNextSwiss Settings",
                        "label": _("ERPNextSwiss Settings"),
                        "description": _("ERPNextSwiss Settings")
