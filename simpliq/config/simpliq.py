@@ -4,7 +4,7 @@ from frappe import _
 def get_data():
     return[
         {
-            "label": _("Finanzbuchhaltung"),
+            "label": _("Accounting"),
             "icon": "octicon octicon-repo",
             "items": [
                    {
@@ -28,7 +28,7 @@ def get_data():
             ]
         },
         {
-            "label": _("Vertrieb"),
+            "label": _("Sales"),
             "icon": "octicon octicon-repo",
             "items": [
                    {
@@ -70,7 +70,32 @@ def get_data():
             ]
         },
         {
-            "label": _("Einstellungen"),
+            "label": _("Timesheets"),
+            "icon": "octicon octicon-repo",
+            "items": [
+                    {
+                        "type": "doctype",
+                        "name": "Timesheet",
+                        "label": _("Timesheet"),
+                        "description": _("Timesheet")
+                    }
+            ]
+        },
+        {
+            "label": _("Invoicing"),
+            "icon": "octicon octicon-repo",
+            "items": [
+                   {
+                       "type": "report",
+                       "name": "Offene Positionen",
+                       "label": _("Offene Positionen"),
+                       "doctype": "Timesheet",
+                       "is_query_report": True
+                   }
+            ]
+        },
+        {
+            "label": _("Settings"),
             "icon": "octicon octicon-repo",
             "items": [
                    {
