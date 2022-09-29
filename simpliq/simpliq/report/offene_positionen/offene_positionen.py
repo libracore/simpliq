@@ -199,7 +199,8 @@ def create_invoice(from_date, to_date, customer):
         elif e.dt == "Timesheet":
             item['timesheet'] = e.reference
             item['ts_detail'] = e.detail
-            
+            item['qty'] = e.hours
+     
         sinv.append('items', item)
         
     sinv.insert()
