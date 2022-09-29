@@ -167,7 +167,8 @@ def get_invoiceable_entries(from_date=None, to_date=None, customer=None):
                                                       FROM `tabAbo Invoice` AS `tAI2`
                                                       WHERE `tAI2`.`parent` = `tabAbo`.`name`) <= DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 12 MONTH) ,'%Y-%m-01'))
                 )
-    
+        
+        ORDER BY `date` ASC;
     """.format(from_date=from_date, to_date=to_date, invoicing_item=invoicing_item, customer=customer)
     entries = frappe.db.sql(sql_query, as_dict=True)
     return entries
@@ -180,7 +181,8 @@ def create_invoice(from_date, to_date, customer):
     # create sales invoice
     sinv = frappe.get_doc({
         'doctype': "Sales Invoice",
-        'customer': customer
+        'customer': customer,
+        'customer_group': frappe.get_value("Customer", customer, "customer_group")
     })
     
     for e in entries:
@@ -189,7 +191,7 @@ def create_invoice(from_date, to_date, customer):
             'qty': e.qty,
             'rate': e.rate,
             'description': e.remarks,            # will be overwritten by frappe
-            'remarks': "{0}: {1}".format(e.date, e.remarks)
+            'remarks': "{0}: {1}".format(e.date, e.remarks) if e.remarks else "{0}".format(e.date)
         }
         if e.dt == "Delivery Note":
             item['delivery_note'] = e.reference
