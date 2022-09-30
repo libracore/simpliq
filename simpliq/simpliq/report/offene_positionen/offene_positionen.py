@@ -201,6 +201,7 @@ def create_invoice(from_date, to_date, customer):
             'rate': e.rate,
             'description': e.remarks,            # will be overwritten by frappe
             'remarks': remarkstring
+
         }
         if e.dt == "Delivery Note":
             item['delivery_note'] = e.reference
