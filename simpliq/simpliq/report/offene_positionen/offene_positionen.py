@@ -70,13 +70,9 @@ def get_data(filters):
     return output
 
 def get_invoiceable_entries(from_date=None, to_date=None, customer=None):
-    if from_date:
-        from_date = filters.from_date
-    else:
+    if not from_date:
         from_date = "2000-01-01"
-    if to_date:
-        to_date = filters.to_date
-    else:
+    if not to_date:
         to_date = "2099-12-31"
     if not customer:
         customer = "%"
