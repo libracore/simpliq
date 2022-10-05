@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="74.000137mm"
+   height="74.000137mm"
+   viewBox="0 0 74.000137 74.000137"
+   version="1.1"
+   id="svg6826"
+   inkscape:export-filename="simpliq-logo-white-150.png"
+   inkscape:export-xdpi="51.486393"
+   inkscape:export-ydpi="51.486393"
+   sodipodi:docname="simpliq-logo-white.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview6828"
+     pagecolor="#7e7e7e"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="false"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     showborder="true"
+     inkscape:zoom="2"
+     inkscape:cx="-45.75"
+     inkscape:cy="156.5"
+     inkscape:window-width="3440"
+     inkscape:window-height="1377"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs6823">
+    <rect
+       x="216.50565"
+       y="147.55479"
+       width="268.90829"
+       height="142.03873"
+       id="rect117-9-8-8-9-4-5-6-6-9-4-7-9-8-4-0-5-4" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath351">
+      <g
+         inkscape:label="Clip"
+         id="use353">
+        <g
+           id="g362"
+           transform="matrix(2.7881694,0,0,2.7881694,-4.3292615,-667.42291)"
+           inkscape:label="Logo"
+           inkscape:export-filename="white.svg"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96"
+           style="fill:#162e50;fill-opacity:1">
+          <g
+             id="g358"
+             style="fill:#ffffff;fill-opacity:1" />
+          <g
+             aria-label="S"
+             transform="matrix(0.28230282,0,0,0.28230282,-40.19192,213.60658)"
+             id="g360"
+             style="font-size:96px;white-space:pre;shape-inside:url(#rect117-9-8-8-9-4-5-6-6-9-4-7-9-8-4-0-5-4);display:inline;fill:#ffffff" />
+        </g>
+      </g>
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline"
+     transform="translate(-39.199937,-49.81861)">
+    <path
+       id="path5218"
+       style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.17261"
+       d="m 28.882394,257.2446 a 13.270356,13.270356 0 0 0 -13.270287,13.27029 13.270356,13.270356 0 0 0 13.270287,13.27047 H 42.152867 V 270.51489 A 13.270356,13.270356 0 0 0 28.882394,257.2446 Z"
+       transform="matrix(2.7881694,0,0,2.7881694,-4.3292627,-667.42291)" />
+    <g
+       id="g1004"
+       transform="translate(0,-8.6952402e-4)"
+       style="fill:#162e50;fill-opacity:1">
+      <path
+         id="path297"
+         style="font-size:96px;font-family:Poppins;-inkscape-font-specification:Poppins;white-space:pre;shape-inside:url(#rect117-9-8-8-9-4-5-6-6-9-4-7-9-8-4-0-5-4);display:inline;fill:#162e50;fill-opacity:1"
+         d="M 244.53784 167.36261 C 240.18585 167.36261 236.31376 168.13039 232.92176 169.66639 C 229.59377 171.20239 227.00175 173.37832 225.14576 176.19432 C 223.28976 179.01032 222.36205 182.2427 222.36205 185.89069 C 222.36205 190.05069 223.28976 193.37863 225.14576 195.87463 C 227.06575 198.30662 229.33791 200.09834 231.96191 201.25034 C 234.6499 202.40234 238.20214 203.55434 242.61813 204.70634 C 246.20213 205.66634 249.04963 206.5622 251.16163 207.3942 C 253.27363 208.2262 255.03414 209.44257 256.44214 211.04256 C 257.85014 212.64256 258.55356 214.72228 258.55356 217.28228 C 258.55356 218.39444 258.40917 219.43816 258.12681 220.41658 L 255.18619 217.15491 L 243.45784 217.15556 L 252.33748 227.00491 C 250.34095 227.94604 247.93365 228.41843 245.11362 228.41843 C 240.76163 228.41843 237.43369 227.36264 235.12969 225.25065 C 232.88969 223.07465 231.60961 220.41827 231.28961 217.28228 L 221.97797 217.28228 C 222.04197 220.93027 223.0659 224.16265 225.0499 226.97865 C 227.0339 229.73064 229.75398 231.90658 233.20998 233.50658 C 236.72998 235.04258 240.69763 235.81036 245.11362 235.81036 C 249.72162 235.81036 253.72178 234.9145 257.11378 233.12251 C 257.28111 233.0341 257.44487 232.94306 257.60815 232.85201 L 260.27697 235.81233 L 272.00597 235.81233 L 264.15249 227.10076 C 264.3771 226.77913 264.59204 226.45113 264.79393 226.11465 C 266.52193 223.23465 267.38593 220.1622 267.38593 216.8982 C 267.38593 212.67421 266.42571 209.34627 264.50571 206.91427 C 262.58571 204.41827 260.2817 202.5947 257.59371 201.4427 C 254.90571 200.2267 251.35413 199.01033 246.93814 197.79434 C 243.29014 196.77034 240.44198 195.87448 238.39398 195.10648 C 236.40999 194.27448 234.71383 193.09062 233.30584 191.55462 C 231.96184 190.01862 231.28961 188.03447 231.28961 185.60247 C 231.28961 182.21048 232.44162 179.58661 234.74562 177.73061 C 237.04962 175.81062 240.02585 174.85039 243.67384 174.85039 C 247.57784 174.85039 250.714 175.84247 253.08199 177.82647 C 255.44999 179.74647 256.79378 181.98611 257.11378 184.54611 L 266.71364 184.54611 C 266.20164 179.36211 263.93014 175.20268 259.89814 172.06668 C 255.93015 168.93069 250.80984 167.36261 244.53784 167.36261 z "
+         transform="matrix(0.78710809,0,0,0.78710809,-116.39114,-71.851581)" />
+    </g>
+  </g>
+</svg>
