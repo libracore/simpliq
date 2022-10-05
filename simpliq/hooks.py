@@ -6,9 +6,10 @@ app_name = "simpliq"
 app_title = "simpliq"
 app_publisher = "libracore"
 app_description = "ERP cusomtisations for simpliq"
-app_icon = "octicon octicon-file-directory"
-app_color = "grey"
+app_icon = "fa fa-server"
+app_color = "#162e50"
 app_email = "info@libracore.com"
+app_logo_url = "/assets/simpliq/images/simpliq-logo-white.svg"
 app_license = "AGPL"
 
 # Includes in <head>

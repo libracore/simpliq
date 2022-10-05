@@ -90,6 +90,7 @@ def get_invoiceable_entries(from_date=None, to_date=None, customer=None):
             DATE(`tabTimesheet Detail`.`from_time`) AS `date`,
             "Timesheet"  AS `dt`,
             `tabTimesheet`.`name` AS `reference`,
+            `tabTimesheet`.`employee_name` AS `employee_name`,
             `tabTimesheet Detail`.`name` AS `detail`,
             `tabProject`.`name` AS `project`,
             "{invoicing_item}" AS `item`,
@@ -119,6 +120,7 @@ def get_invoiceable_entries(from_date=None, to_date=None, customer=None):
             `tabDelivery Note`.`posting_date` AS `date`,
             "Delivery Note" AS `dt`,
             `tabDelivery Note`.`name` AS `reference`,
+            NULL AS `employee_name`,
             `tabDelivery Note Item`.`name` AS `detail`,
             `tabDelivery Note`.`project` AS `project`,
             `tabDelivery Note Item`.`item_code` AS `item`,
@@ -145,6 +147,7 @@ def get_invoiceable_entries(from_date=None, to_date=None, customer=None):
             `tabAbo`.`start_date` AS `date`,
             "Abo" AS `dt`,
             `tabAbo`.`name` AS `reference`,
+            NULL AS `employee_name`,
             `tabAbo Item`.`name` AS `detail`,
             NULL AS `project`,
             `tabAbo Item`.`item` AS `item`,
@@ -186,12 +189,19 @@ def create_invoice(from_date, to_date, customer):
     })
     
     for e in entries:
+        #Format Remarks 
+        if e.remarks:
+            remarkstring = "{0} : {1} : {2}".format(e.date.strftime("%d.%m.%Y"), e.employee_name, e.remarks)
+        else:
+            remarkstring = "{0} : {1}".format(e.date.strftime("%d.%m.%Y"), e.employee_name)
+
         item = {
             'item_code': e.item,
             'qty': e.qty,
             'rate': e.rate,
             'description': e.remarks,            # will be overwritten by frappe
-            'remarks': "{0}: {1}".format(e.date, e.remarks) if e.remarks else "{0}".format(e.date)
+            'remarks': remarkstring
+
         }
         if e.dt == "Delivery Note":
             item['delivery_note'] = e.reference
