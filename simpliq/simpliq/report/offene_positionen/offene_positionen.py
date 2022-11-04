@@ -187,7 +187,7 @@ def create_invoice(from_date, to_date, customer):
     for e in entries:
         #Format Remarks 
         if e.remarks:
-            remarkstring = "{0} : {1} : {2}".format(e.date.strftime("%d.%m.%Y"), e.employee_name, e.remarks)
+            remarkstring = "{0} : {1} <br>{2}".format(e.date.strftime("%d.%m.%Y"), e.employee_name,  e.remarks.replace("\n", "<br>"))
         else:
             remarkstring = "{0} : {1}".format(e.date.strftime("%d.%m.%Y"), e.employee_name)
 
