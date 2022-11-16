@@ -36,11 +36,12 @@ cur_page.container.addEventListener("dblclick", function(event) {
                 'method': "simpliq.simpliq.report.offene_positionen.offene_positionen.create_invoice",
                 'args': {
                     'from_date': frappe.query_report.filters[0].value,
-                    'to_date': frappe.query_report.filters[0].value,
+                    'to_date': frappe.query_report.filters[1].value,
                     'customer': frappe.query_report.data[row]['customer'] 
                 },
                 'callback': function(response) {
-                    frappe.show_alert( __("Created: " + response.message) );
+                    frappe.show_alert( __("Created") + ": <a href='/desk#Form/Sales Invoice/" + response.message
+                        + "'>" + response.message + "</a>");
                     frappe.query_report.refresh();
                 }
             });
