@@ -91,6 +91,7 @@ def get_invoiceable_entries(from_date=None, to_date=None, customer=None):
             `tabProject`.`name` AS `project`,
             "{invoicing_item}" AS `item`,
             `tabTimesheet Detail`.`billing_hours` AS `hours`,
+            `tabTimesheet Detail`.`hours` AS `full_hours`,
             1 AS `qty`,
             NULL AS `rate`,
             `tabTimesheet Detail`.`remarks` AS `remarks`,
@@ -121,6 +122,7 @@ def get_invoiceable_entries(from_date=None, to_date=None, customer=None):
             `tabDelivery Note`.`project` AS `project`,
             `tabDelivery Note Item`.`item_code` AS `item`,
             NULL AS `hours`,
+            NULL AS `full_hours`,
             `tabDelivery Note Item`.`qty` AS `qty`,
             `tabDelivery Note Item`.`net_rate` AS `rate`,
             `tabDelivery Note`.`name` AS `remarks`,
@@ -148,6 +150,7 @@ def get_invoiceable_entries(from_date=None, to_date=None, customer=None):
             NULL AS `project`,
             `tabAbo Item`.`item` AS `item`,
             NULL AS `hours`,
+            NULL AS `full_hours`,
             `tabAbo Item`.`qty` AS `qty`,
             `tabAbo Item`.`rate` AS `rate`,
             `tabAbo`.`name` AS `remarks`,
@@ -203,9 +206,14 @@ def create_invoice(from_date, to_date, customer):
             item['delivery_note'] = e.reference
             item['dn_detail'] = e.detail
         elif e.dt == "Timesheet":
+            # check if invoiceable is > 0: based on invoiceable, otherwise, show as free-of-charge positione
+            qty = e.hours
+            if qty == 0:
+                qty = e.full_hours
+                item['rate'] = 0.0
             item['timesheet'] = e.reference
             item['ts_detail'] = e.detail
-            item['qty'] = e.hours
+            item['qty'] = qty
      
         sinv.append('items', item)
         
