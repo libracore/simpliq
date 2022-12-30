@@ -106,8 +106,8 @@ def get_invoiceable_entries(from_date=None, to_date=None, customer=None):
         WHERE 
            `tabTimesheet`.`docstatus` = 1
            AND `tabCustomer`.`name` LIKE "{customer}"
-           AND ((`tabTimesheet Detail`.`from_time` >= "{from_date}" AND `tabTimesheet Detail`.`from_time` <= "{to_date}")
-            OR (`tabTimesheet Detail`.`to_time` >= "{from_date}" AND `tabTimesheet Detail`.`to_time` <= "{to_date}"))
+           AND ((DATE(`tabTimesheet Detail`.`from_time`) >= "{from_date}" AND DATE(`tabTimesheet Detail`.`from_time`) <= "{to_date}")
+            OR (DATE(`tabTimesheet Detail`.`to_time`) >= "{from_date}" AND DATE(`tabTimesheet Detail`.`to_time`) <= "{to_date}"))
            AND `tabSales Invoice Item`.`name` IS NULL
         
         UNION SELECT
