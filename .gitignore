@@ -4,3 +4,4 @@
 *.swp
 tags
 simpliq/docs/current
+__pycache__
